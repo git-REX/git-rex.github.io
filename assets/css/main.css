@@ -10,7 +10,7 @@
    Custom styles for Projects Page
 ------------------------------------- */
 
-.project-grid {
+.portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
@@ -19,7 +19,7 @@
   margin: auto;
 }
 
-.project {
+.portfolio-card {
   background: #111;
   border-radius: 10px;
   overflow: hidden;
@@ -27,18 +27,18 @@
   transition: transform 0.3s ease;
 }
 
-.project:hover {
+.portfolio-card:hover {
   transform: translateY(-5px);
 }
 
-.project img {
+.portfolio-card img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.project h3,
-.project p {
+.portfolio-card h3,
+.portfolio-card p {
   color: #fff;
   padding: 10px 20px;
 }
