@@ -7,4 +7,33 @@
   <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+
+  <style>
+  /* Define the pulsing element behavior */
+  .pulse-effect {
+      background: transparent; 
+      color: #ffffff; 
+      text-decoration: none; 
+      font-size: 20px; 
+      font-weight: 500;
+      display: inline-block; /* Crucial: allows transform scaling to work */
+      animation: pulseContrast 2s infinite ease-in-out;
+  }
+
+  /* Define the scale & contrast keyframes */
+  @keyframes pulseContrast {
+      0% {
+          transform: scale(1);
+          opacity: 0.5; /* Faded state */
+      }
+      50% {
+          transform: scale(1.15); /* Grows 15% bigger */
+          opacity: 1; /* Bright state */
+      }
+      100% {
+          transform: scale(1);
+          opacity: 0.5; /* Returns to faded state */
+      }
+  }
+</style>
 </head>
